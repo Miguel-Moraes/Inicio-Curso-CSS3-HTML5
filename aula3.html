@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background: blue ;
+        }
+       .letra-vermelha{
+        font-size: 24px;
+        color: red;
+       }
+    </style>
+</head>  
+<body>
+    <h1 style="background: red;">Cabeçalho</h1>
+    <h1>Cabeçalho</h1>
+    
+    <p> <b>Lorem</b> <strong> dolor </strong> <i> sit amet</i> <em> consectetur</em> , adipisicing 
+    <!--usar *Lodem* prar fazer um texto de teste.-->
+       <a href="https://dicionario.priberam.org/elite" target="_blank"> elit. </a>
+
+         
+    Iste 
+
+    <a   href="https://w7.pngwing.com/pngs/631/176/png-transparent-sword-of-the-berserk-guts-rage-berserk-vol-1-amazon-com-manga.png" target="_blank"> <img class="img-berserk" src="https://w7.pngwing.com/pngs/631/176/png-transparent-sword-of-the-berserk-guts-rage-berserk-vol-1-amazon-com-manga.png" alt="Logo de Berserk" style=" height:50px;"  > berserk </a>
+     <!--usar *target* para configurar a janela do link colocado-->
+    <!--usar *href* para por um link, na mesma linha do link poder colocar *target*-->
+    <!--pode colocar *style* na mesma linha pra mudar o estilo ou fazer uma *class* para mudar o estilo dentro head-->
+    <!---->
+    
+    <del>vermelho</del> <ins>azul</ins>,
+    <!--corrigir palavra erra com *del* e *ins*--> 
+    
+    iusto deleniti dolor eos quaerat, <s> s p/ colocar risco</s> <u> u para sublinhar/underline</u> 
+    <small> small para deixar pequeno</small>
+    
+    2<sup>2</sup>
+    <!--*sup* para colocar algo elevador a algo anterior a ele-->
+    
+    H<sub>2</sub>o 
+    <!--*sub* para descer, ao invez de elevar-->
+
+    <br> hoje <br>é <br> meu dia <br> 
+    <!--tag *br* para quebra de linha-->
+
+    <q cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/q">citação</q>
+    <!--*q* para colocar citação, dentro do <q> colocar *cite* para colocar um link do que eu quero citar-->
+
+    totam, at modi enim libero. Facere sit consequatur est inventore numquam assumenda iure voluptatibus.</p>
+    
+    <hr> <!--tag de linha horizontal, n tem corpo-->
+
+    <!--*code* dizer que algo é um codigo-->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste recusandae, <code>console.log</code> iusto deleniti dolor eos quaerat, repellendus totam, at modi enim libero. Facere sit consequatur est inventore numquam assumenda iure voluptatibus.</p>
+
+    <!--a seguir: tags fora do *<p>* blockquote=citação(pode possir *p* dentro)-->
+    <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/q">aqui sim eu estou fazendo um bloco de citação</blockquote>
+
+    <!--tag pre formatada como codigo, que precisa usar quebra de linha, usar *pre* e não *p*
+    Exemplo:-->
+
+    <pre><code>
+                #include <iostream>
+                #include <locale>
+                using namespace std;
+                int main()
+                {
+                setlocale(LC_ALL, "ptb");
+                int codigo, qnt;
+                float valor=0;
+                char *pedido;
+                bool invalido=false;
+                cout<< " *** Cardápio ***\n";
+                cout<<" 100 - Hambúrger - R$5.50\n";
+                cout<<" 101 - Cachorro-quente - R$4,50\n";
+                cout<<" 102 - Milkshake - R$7,00\n";
+                cout<<" 103 - Pizza brotinho - R$8,00\n";
+                cout<<" 104 - Cheeseburguer - R$8,50\n";
+                cout<<"\n";
+                cout<<"Informe o código do seu pedido: \n";
+                cin>>codigo;
+                cout<<"Quantidade desejada: ";
+                cin>>qnt;
+                switch (codigo)
+                {
+                    case 100: pedido="Hamburger"; valor=qnt*5.50; break;
+                    case 101: pedido="Cachorro-quente"; valor=qnt*4.50; break;
+                    case 102: pedido="Milkshake"; valor=qnt*7.00; break;
+                    case 103: pedido="Pizza brotinho"; valor=qnt*8.00; break;
+                    case 104: pedido="Chesseburger"; valor=qnt*8.50; break;
+                    default:
+                        cout<<"Pedido inválido!!!";
+                        invalido=true;
+                }
+                if (!invalido)
+                {	cout<< qnt << " de " << pedido << " Valor total: R$"<< valor;
+            }
+                }   
+        </code>
+    </pre>
+
+    <!--tag *span* só pode ser usada inline(dentro de paragrafo), colocar um style dentro dela, ou puxar uma class, e citar ela no head --> 
+    <p><span class="letra-vermelha">VERMELHO
+    </span><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/span"target="_blank" > tag span</a> é a cor do  coração  </p>
+
+    <!--tag *div* que não é inline, é um bloco-->
+    <div>eu sou um bloco.</div> <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/div" target="_blank">div</a>
+
+</body>
+</html>
