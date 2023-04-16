@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 7</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background: red;
+            
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: red;
+            padding: 10px 70px;
+            display: block;
+            text-transform: uppercase;
+            }
+            nav a:hover{
+                background: rgba(0, 0, 0, 0.5);
+            }
+            nav{
+                display: flex;
+                align-items: center;
+            }
+            nav ul {
+                display: flex;
+                list-style-type: none;
+                
+            }
+            
+        
+    </style>
+</head>
+<body>
+    <!--
+        colocar :hover ao lado da tag 'a' no style, 
+        ex:
+        <style>
+            nav a:hover{
+            
+            }
+        para colocar uma sombra sobre qnd passar o mouse em cima    
+        
+        </style>
+    -->
+
+    <!--em style da *nav{}*
+    °     usa-se *align-itens: center;* para sempre alinhar ao centro (vertical) idependente do tamanho da tela.
+        
+    °    usa-se *justify-content: center;* para sempre alinhar ao centro (horizontal) idependente do tamanho da tela.
+     -->
+    <!--em *style* em *nav ul {}* usar
+        display: flex; 
+        ou 
+        flex-direction: row(ou column); (alinhar)
+        
+        list-style-type: none;
+        ou 
+        list-style: none;
+    -->
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">About</a> </li>
+            <li> <a href="#">Products</a> </li>
+        </ul>
+    </nav>
+    <!--lista não ordenada *<ul>* que tem itens de listas com a tag *<li>* dentro dela (°,°,°)
+        (geralmente utilizadas para menus e side bars)-->
+        <ul>
+            <li>item 2</li>
+            <li>item 1</li>
+            <li>item 3</li>
+        </ul>
+
+        <!--lista ordenada tag *<ol>* usa-se tbm a lag *<li>* dentro dela(1.2.3.)-->
+            <!--dentro da lista ordenada posso por o *type=""* para modificar a lista
+                Ex: 
+                <ol type="*"> Item 1 </ol>
+            Pode também ser colocado dentro da tag o *start="x" para começar a lista com a numeração escolhida*
+            -->
+        <ol type="I" start="999">
+            <li> item 1 </li>
+            <li> item 2 </li>
+            <li> item 3 </li>
+        </ol>
+
+        <!--outro tipo de lista é o *<dl>* (list description) usado o *<dt>* dentro do <dl> para nomear um item, e após colocar um *<dd>* dentro do <dt> para descrever o item-->
+        <dl>
+            <dt>Café</dt>
+            <dd>bebida preta quente</dd>
+            
+        </dl>
+</body>
+</html>
