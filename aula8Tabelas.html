@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 8 - Tabelas</title>
+</head>
+<style>
+    body{
+        font-family: sans-serif
+       
+    }
+    table{
+        border-collapse: collapse;
+        width: 800px ;
+        
+    }
+    table td, table th {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: left;
+    }
+    table caption{
+        text-align: right;
+        font-style: italic;
+        font-size: 14px;
+        caption-side:bottom;
+        margin: 5px 0;
+    }
+    tfoot td, table th{
+        background: #ddd;
+    }
+    tfoot td{
+        font-style: italic;
+    }
+    .responsive-table{
+        max-width: 100%;
+        overflow-x: auto;
+    }
+</style>
+<!--
+    style: border-collapse: collapse; para juntar as linhas das tabelas.
+-->
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    <!--a seguir foi ultilizador uma div contento a class='responsive-table', que no style foi modificada para que se a tabela for muito extensa, pode fazer um scroll para a horizontal somente na tabela(resto do site ficou normal) caso se ela for muito extensa, ter acesso facil de rolamento pelo celular ou qualquer outro aparelho 
+    ex: overflow-x:auto; (overflow-x sendo X horizontal e Y vertical)-->
+    <div class="responsive-table">
+    <table>
+        <caption>Uma descrição para a tabela</caption>
+        <thead>
+            <tr>
+                <th>Título 1</th>
+                <th>Título 2</th>
+                <th>Título 3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <tr>
+                <td colspan="2" >AQUI</td>
+                <td>Corpo 3</td>
+            </tr>
+            <!--para que uma linha oculpe mais de uma coluna (horizontal), dentro da *<td>* referente, ultilizar a colspan="#"
+                exemplo: <tr>
+                            <td colspan="2"> linha </td>
+                         </tr>
+            
+            também pode ultilizar para que uma linha oculpe mais de uma coluna (vertical), dentro da *<td>* referente, ultilizar a rowspan="#"  -->
+
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>               
+                <td colspan="2" rowspan="2"></td>
+                <td rowspan="">TOTAL:</td>
+            </tr>
+            <tr>               
+               
+                <td>R$ 555,00</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+    <!-- tag *<table>* = tabela / dentro da <table> por a tag *<thead>* (é opcional) cabeçalho da tabela. dentro da thead teremos uma linha q é a tag <tr>, e dentro dela ultiliza a tag das colunas que são ou *<tr>* ou *<th>*. 
+        se ultilizar a <thead>, logo ultilizar a <th> 
+            
+        para fazer as linhas das colunas da tabela, ultilizar a tag *<tbody>*, dentro da table. 
+        em seguida ultiliza a tag *<tr>* e dentro dela a tag *<td>* 
+            
+        para fazer mais de uma linha, refazer a tag *<tr>* com *<td>* dentro da *<tbody>*
+            
+        para o rodapé da tabela ultilizar o *<tfoot>*
+        onde novamente incere as linhas das colunas com a tag *<tr>*(linha) e dentro dela também a *<td>*-->
+</body>
+</html>
