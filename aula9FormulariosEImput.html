@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 9 - Formulários e Imputs</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        label{
+           cursor: pointer;
+          
+        }
+        #nome {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off">
+            <p>O Formulário</p>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required >
+                <!--colocar 'required' para aparecer uma mensagem de que falta preencher, caso deixado em brando-->
+            </p>
+            <p>
+                <label for="dev1">Sou um dev1</label>
+                <input type="checkbox" id="dev1" name="dev1" value="sim" > <br>
+                <label for="dev2">Sou um dev2</label>
+                <input type="checkbox" id="dev2" name="dev2" value="sim" > <br>
+                <label for="dev3">Sou um dev3</label>
+                <input type="checkbox" id="dev3" name="dev3" value="sim" >
+                <!--por por checked para ja deixar marcado a box-->
+            </p>
+
+            <p>
+                Gênero:<br>
+                <label for="feminino"> feminino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino" required> <br>
+                <label for="masculino">masculino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" > <br>
+                <label for="outro">outro</label>
+                <input type="radio" id="outro" name="genero" value="outro" >
+                
+                <!--para fazer um formulario de opções e quer q a pessoa apenas marque uma, como exemplo do genero, ultilizar no lugar do *name='?'* o mesmo para todos, e no *type* ultilizar o *radio*-->
+            </p>
+
+            <p>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" value="2022-01-01" >
+            </p>    
+            
+            <p>
+                <label for="datetime">Date & Time:</label>
+                <input type="datetime-local" id="datetime" name="datetime" value="2022-01-01T20:00" >
+            </p>    
+
+            <p>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" value="20:00:01" >
+            </p>    
+            
+            <p>
+                <label for="color">Cor preferida:</label>
+                <input type="color" id="color" name="color" value="#76D7C4" >
+            </p>    
+
+            <p>
+                <label for="email">Seu e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="ex: email@email.com" >
+            </p>    
+
+            <p>
+                <label for="password">Sua senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" >
+            </p>    
+
+            <p>
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number" min="0" max="50"  step="5">
+                <!--*min="?"* para por o numero minimo que vc quer
+                *max="?"* para por o numero maximo que vc quer
+                *step="?"* para colocar de quantos numero ele vai pular -->
+            </p>    
+
+            <p>
+                <label for="file">Sua foto:</label>
+                <input type="file" id="file" name="file" accept=".png,.svg,image/*" multiple>
+                <!--colocar *accept='?'* para filtrar os arquivos que vc quer, como: 
+                accept=".png,.jpeg,image/*"--
+                
+                usar *multiple* para posibilitar o envio de multiplos arquivos> -->
+            </p>    
+
+            <p>
+                <label for="range">range:</label>
+                <input type="range" id="range" name="range" min="0" max="10" step="2" >
+                
+                <datalist>
+                    <option value=""></option>
+                </datalist> 
+            </p>    
+
+            <p>
+                <label for="url">Sua url:</label>
+                <input type="url" id="url" name="url" placeholder="URL " >
+            </p>    
+
+            <p>
+                <label for="search">search:</label>
+                <input type="search" id="search" name="search" placeholder="search" >
+            </p>    
+
+            <p>
+                <label for="select">Selecione alguma opção:</label>
+                <select id="select" name="select" multiple>
+                    <optgroup label="test">
+                    <option value="qualquer 1" label="Label 1" >
+                    <option value="qualquer 2" label="Label 2" disabled>
+                    <option value="qualquer 3" label="Label 3" selected>
+                    <option value="qualquer 4" label="Label 4">
+                    </optgroup>
+                    <!-- *<optgroup>* para fazer um grupo de opções-->
+                </select>
+            </p>    
+
+            <p>
+                <label for="textarea">textarea:</label>
+                <textarea name="textarea" id="textarea" cols="9" rows="3">
+                    Mas se a gente colocar
+                </textarea>
+            </p>    
+
+
+
+
+            <p>
+                <!--type='submit' serve para enviar o dado preenchido-->
+                <button type="submit">Enviar</button>
+                <!--type-'reset' dentro do button serve para resetar o formulario para o valor padrão-->
+                <button type="reset">Reset</button>
+            </p>
+    </form>
+</body>
+</html>
