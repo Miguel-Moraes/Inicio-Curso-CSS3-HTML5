@@ -1,0 +1,43 @@
+ul li::after{
+    content: ' - ';
+    background: darkred;
+    color: #FFF;
+    display: block;
+}
+
+ul li::before{
+    content: ' + ';
+}
+
+/* ultilizar '::after' ou '::before' para adcionar um elemento novo depois(::after) ou antes(::before) do conteudo
+obs: usar '::' para pseudo elemento.*/
+
+p{
+    font-size: 25px;
+}
+
+p::first-letter {
+    font-size: 150px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+/* '::first-letter' = modificar apenas a primeira letra do 'p' */
+
+p::first-line{
+    background: red;
+}
+/* primira linha */
+
+p::selection {
+    background: black;
+    color: white;
+}
+/* quando for copiar algo ficar com essas propriedades */
+
+.form-field::placeholder {
+    color: blue;
+}
+::placeholder {
+    color: red;
+}
