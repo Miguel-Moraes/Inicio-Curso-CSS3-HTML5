@@ -1,0 +1,136 @@
+.heading{
+    transition: all 600ms ease-in-out;
+}
+/* toda transição(transition),propriedade que mudar ocorrer em todo elemento, classe,etc  (nao funciona em todas as propriedades do css)
+
+ex: transition: all¹ 600ms² ease-in-out³
+
+¹ - all (todas) 
+² - 600ms(quanto tempo que quer Xms(milisegundo) Xs (segundos)) 
+³ - ease-in-out (como quer q o efeito ocorra)
+
+*/
+
+.heading:hover {
+    background: red;
+}
+/* ultilizar ':hover' = passar o mouse sobre algum elemento
+ex: .heading:hover { }*/
+
+a {
+    color: darkorange;
+}
+
+a:link {
+    color: darkviolet;
+}
+/* 
+':link' ultilizar pra modificar links que nunca foram vizitados
+ex: a:link{
+    color: darkviolet;
+} */
+
+
+a:visited {
+    color: darkcyan;
+}
+/* 
+':vizited' ultilizar pra modificar links que já foram vizitados
+ex: a:visited{
+    color: darkcyan;
+} */
+a:hover{
+    background: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    background: darkorchid;
+    color: white;
+    text-decoration: none;
+}
+/* 
+':active' ultilizar pra indicar que o elemento foi clicado, está ativo no momento
+
+ex: a:active{
+    background: darkorchid;
+    color: white;
+    text-decoration: none;;
+} */
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    outline: none;
+    border: 1px solid black;
+}
+/* 'input:focus' quando o input estiver em foco (pequena sombra em volta da box de texto)
+ */
+
+ input:disabled {
+    background-color: blueviolet;
+    cursor: not-allowed;
+
+}
+/* 'input:disabled' quando o input estiver desabilitado
+ 
+cursor: not-allowed; (cursor de não permitido em cima do input*/
+
+input:checked + p {
+  background: red;
+}
+
+.pai .lista li:first-child{
+    background: red;
+}
+ 
+/* seleção de parentesco .pai .lista li(:first-child ou :last-child */
+
+p:not(.meio) {
+    color: blue;
+}
+
+/* ':not()' selecionar multiplos 'p' menos os 'p' com a classe 'class=meio' (colocar a classe espessifica dentro das aspas '()' dentro do ':not()' )
+
+ou tbm em um input:checked
+ex: input:not(:checked) + p{
+    color: blue;
+} */
+
+
+
+
+
+/* :nth-child() */
+
+
+ul li:nth-child(odd) {
+    background: darkblue;
+}
+
+ul li:nth-child(even) {
+    background: darkgreen;
+}
+
+/* even(numeros (dos itens) pares)
+odd (numeros (dos itens) impares) */
+
+
+ul li:nth-child(3n) {
+    background: darkorchid;
+}
+/* 'nth-child(Xn)' ultilizar X=numero, ao lado de N=pular ex: 
+(2n) pular de 2 em 2.
+(3n) pular de 3 em 3.
+etc*/
+
+
+ul li:nth-child(3n+5) {
+    background: red;
+}
+/* 'nth-child(Xn+X)' = começando do segundo X (..+X) elemento vai começar a contagem de X (Xn..) em X (Xn..)
+
+ex: 
+'nth-child(2n+5)' = começando do segundo 5 (..+5) elemento vai começar a contagem de 2 (2n..) em 2 (2n..)
+*/
+
