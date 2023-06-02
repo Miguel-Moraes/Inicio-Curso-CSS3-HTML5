@@ -1,0 +1,33 @@
+/* 
+Ordem de especificidade no CSS:
+1 - ID 
+2 - Classes, atributos e pseudo-classes
+3 - Elementos e pseudo-elementos
+id= 100;
+classes,..=010
+elementos,..=001
+
+A ultilização do do '!important' irá priorizar idependente da especificidade.
+
+em caso de empate, a ultima escrita irá ser priorizada
+*/
+
+body#b.bclass p#p.p {
+    background: purple !important;
+}
+
+#p { 
+    background: red;
+}
+/* especificidade 100 por conta do id */
+.p {
+    background: blue;
+}
+
+/* especificidade 010 por conta da classe, portanto o id ganha */
+
+#p.p {
+    background: yellow;
+}
+
+/* especificidade 110 por conta de possuir um id e uma classe, totalizando 110, e ultrapassando a do id sozinho */
